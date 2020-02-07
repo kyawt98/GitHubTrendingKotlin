@@ -32,8 +32,7 @@ class RepoRepository {
 
     companion object{
         private var INSTANCE : RepoRepository? = null
-        fun getInstance() = INSTANCE
-            ?: INSTANCE ?.also {
+        fun getInstance() = INSTANCE?: RepoRepository().also {
                 INSTANCE = it
             }
     }
